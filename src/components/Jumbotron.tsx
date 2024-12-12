@@ -1,4 +1,6 @@
 import ChairOne from "../assets/images/chair-1.jpg";
+import { listTextJumbotron } from "../utils/type";
+import ListTextJumbotron from "./ListTextJumbotron";
 
 const Jumbotron = () => {
   return (
@@ -23,22 +25,16 @@ const Jumbotron = () => {
         </p>
 
         <div className="grid  sm:grid-cols-3 gap-2 my-9 ">
-          <p className="text-xs sm:text-xl text-white font-serif whitespace-nowrap">
-            "Crafted for Comfort"
-          </p>
-          <p className="text-xs sm:text-xl text-white font-serif whitespace-nowrap">
-            "Style Meets Comfort"
-          </p>
-          <p className="text-xs sm:text-xl text-white font-serif whitespace-nowrap">
-            "Designed for Life"
-          </p>
+          {listTextJumbotron.map((item) => {
+            return <ListTextJumbotron {...item} key={item.id} />;
+          })}
         </div>
         <a
           href="#product"
           className="bg-white p-3 text-xs px-9 rounded-lg font-serif text-center my-3 "
         >
           See product
-      </a>
+        </a>
       </div>
     </>
   );

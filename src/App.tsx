@@ -1,13 +1,18 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Contact, DetailProduct, LandingPage, NotFound } from "./pages";
 import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Cart from "./pages/Cart";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { calculateTotalCart } from "./redux/features/cart/CartSlice";
-import Footer from "./components/Footer";
 import { RootState } from "./redux/store/store";
+import { Suspense } from "react";
+import { Footer, Loading } from "./components";
+
+const LandingPage = React.lazy(() => import("./pages/LandingPage"));
+const Cart = React.lazy(() => import("./pages/Cart"));
+const DetailProduct = React.lazy(() => import("./pages/DetailProduct"));
+const Contact = React.lazy(() => import("./pages/Contact"));
+const NotFound = React.lazy(() => import("./pages/NotFound"));
 
 const App = () => {
   const { cartItems } = useSelector((state: RootState) => state.cart);
@@ -42,9 +47,11 @@ const App = () => {
 
   return (
     <>
-      <RouterProvider router={router} />
-      <Footer />
-      <ToastContainer />
+      <Suspense fallback={<Loading />}>
+        <RouterProvider router={router} />
+        <Footer />
+        <ToastContainer />
+      </Suspense>
     </>
   );
 };

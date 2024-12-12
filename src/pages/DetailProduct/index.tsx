@@ -1,9 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { addToCart, detailProduct } from "../../redux/features/cart/CartSlice";
-import Header from "../../components/Header";
 import { RootState } from "../../utils/type";
-import Cart from "../../components/Cart";
+import { Cart, Header } from "../../components";
 
 const DetaiProduct = () => {
   const { id } = useParams();

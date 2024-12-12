@@ -1,4 +1,4 @@
-import ErrorElements from "../../components/ErrorElements";
+import { ErrorElements } from "../../components";
 
 const ErrorPage = () => {
   return (

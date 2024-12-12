@@ -31,6 +31,12 @@ type Footers = {
   href?: string;
 };
 
+type ListTextJumbotron = {
+  id: number;
+  name: string;
+  className: string;
+};
+
 export const products: Products[] = [
   {
     id: 1,
@@ -113,5 +119,23 @@ export const footers: Footers[] = [
     id: 2,
     name: "Contact",
     href: "0851-5680-2452",
+  },
+];
+
+export const listTextJumbotron: ListTextJumbotron[] = [
+  {
+    id: 1,
+    name: "Crafted for comfort",
+    className: "text-xs sm:text-xl text-white font-serif whitespace-nowrap",
+  },
+  {
+    id: 2,
+    name: "Style Meets Comforts",
+    className: "text-xs sm:text-xl text-white font-serif whitespace-nowrap",
+  },
+  {
+    id: 3,
+    name: "Designed for Life",
+    className: "text-xs sm:text-xl text-white font-serif whitespace-nowrap",
   },
 ];

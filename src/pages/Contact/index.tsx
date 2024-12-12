@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import MailContact from "../../assets/images/mail.png";
-import Header from "../../components/Header";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
+import { Header } from "../../components";
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement | null>(null);

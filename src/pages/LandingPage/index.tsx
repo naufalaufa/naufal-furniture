@@ -1,11 +1,6 @@
-import Jumbotron from "../../components/Jumbotron";
-import ChairTwo from "../../assets/images/chair-2.jpg";
-import ChairThree from "../../assets/images/chair-3.jpg";
-import ChairFor from "../../assets/images/chair-4.jpg";
-import Product from "../../components/Product";
+import { ChairFor, ChairThree, ChairTwo } from "../../assets/images";
+import { Contact, Header, Jumbotron, Product } from "../../components";
 import { useState } from "react";
-import Contact from "../../components/Contact";
-import Header from "../../components/Header";
 
 const LandingPage = () => {
   const [searchProduct, setSearchProduct] = useState<string>("");
