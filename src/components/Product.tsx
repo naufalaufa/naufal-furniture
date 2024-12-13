@@ -22,7 +22,10 @@ const Product = ({
   );
 
   return (
-    <div id="product" className="py-8 w-full  place-content-center  px-8">
+    <div
+      id="product"
+      className="py-8 w-full max-w-[100vw]  place-content-center place-items-center  px-8"
+    >
       <h1 className="text-center font-serif">Furniture Product</h1>
       <h1 className="text-center text-3xl sm:text-5xl font-serif">
         Furniture Product
